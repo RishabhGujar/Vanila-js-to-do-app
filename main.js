@@ -57,9 +57,13 @@ function getCheckbox(checkBox,id){
 
 function handleDelete(div,button,id){
    button.addEventListener("click",()=>{
-      div.remove();
+      div.className = "task-container delete"
       handleDeleteStorage(id)
 
+   })
+   div.addEventListener("transitionend",()=>{
+     console.log("hi")
+     div.remove();
    })
 }
 
@@ -86,8 +90,7 @@ function onClickCheckboxSave(id,value){
    }))
 
    localStorage.setItem('to-do-task',JSON.stringify(newArr));
-   
-
+  
 }
 
 
