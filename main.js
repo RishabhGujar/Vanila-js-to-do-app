@@ -28,7 +28,7 @@ function addTodo(name,id,checked){
    p.textContent = name;
 
    button.innerText ="delete";
-   button.className = "btn"
+   button.className = "btn btn-1"
    
    div.className = "task-container";
    div.appendChild(p);
